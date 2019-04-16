@@ -1,0 +1,36 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content padding class="login">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col class="ion-align-self-center">
+        <ion-img src="../../assets/icon/telaLogin.png" class="logo"></ion-img>
+      </ion-col>
+    </ion-row>
+      <ion-row>
+        <ion-col class="ion-align-self-center">
+          <ion-item>
+            <ion-label position="floating" color="light">Matrícula</ion-label>
+            <ion-input [(ngModel)]="usuario" type="text" color="light" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating" color="light">Senha</ion-label>
+            <ion-input [(ngModel)]="senha" #name="ngModel" type="password" color="light" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-padding-top">
+        <ion-col>
+          <ion-button type="submit" color="light" shape="round" expand="block" fill="outline"
+            (click)='Logar(this.usuario, this.senha)'>Entrar</ion-button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
